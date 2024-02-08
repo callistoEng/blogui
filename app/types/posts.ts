@@ -9,11 +9,13 @@ export interface IPosts {
   id: number;
   title: string;
   content_owner: {
-    agency: string;
+    agency?: string | null;
+    user_name?: string | null;
+    email?: string;
   };
   post_tag: string | null;
   overview: string;
-  created_on: string;
+  created_on: Date;
   views: number;
   updated_on: string;
   is_published: boolean;
@@ -21,6 +23,21 @@ export interface IPosts {
   thumbnail: string;
   category: string;
   slug: string;
+}
+
+export interface IPostDetail extends IPosts {
+  content: string;
+  thumbnail_caption: string;
+  previous_post: {
+    id: number;
+    title: string;
+    overview: string;
+  };
+  next_post: {
+    id: number;
+    title: string;
+    overview: string;
+  };
 }
 
 export interface IHomePosts extends IBaseInterface {

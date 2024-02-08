@@ -44,7 +44,8 @@ async function getCategoriesList() {
 
 async function getHomePostsList() {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_DJANGO_BASE_URL}/api/v1/posts/`
+    `${process.env.NEXT_PUBLIC_DJANGO_BASE_URL}/api/v1/posts/`,
+    { cache: "no-store" }
   );
 
   if (!res.ok) {

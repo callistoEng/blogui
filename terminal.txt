@@ -1,0 +1,17 @@
+wt 
+wt -d.
+right click filder to reveal options and open with terminal
+alt+shif+d split powershell
+notepad $PROFILE
+code $PROFILE
+oh-my-posh --init --shell pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
+
+Get-PoshThemes
+##BEST themes
+atomic
+bubblesextra
+catppuccin
+cert
+clean-detailed
+craver
+easy-term

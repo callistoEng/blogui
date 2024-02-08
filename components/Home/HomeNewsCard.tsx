@@ -6,7 +6,7 @@ import { truncateWords } from "@/utils/truncate";
 const HomeNewsCard = ({ post }: { post: IPosts }) => {
   return (
     <Link
-      href="#"
+      href={`/blog/${post.slug}`}
       className="flex flex-col mb-4  items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
     >
       <div className="relative w-32 h-44">
